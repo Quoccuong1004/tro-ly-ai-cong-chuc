@@ -10,6 +10,7 @@ from google import genai
 try:
     # Cố gắng lấy API key từ Streamlit secrets (khi deploy)
     api_key = st.secrets["GOOGLE_API_KEY"]
+    api_key_vip = st.secrets["GOOGLE_API_KEY_VIP"]
 except (FileNotFoundError, KeyError):
     # Nếu không được, lấy từ biến môi trường (khi chạy local)
     # Bạn cần tạo file .env hoặc set biến môi trường thủ công
